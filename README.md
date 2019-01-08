@@ -1,7 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first web app. i'm excited to see how it goes!
+I believe it will be an E Commerce site. 
 
 Things you may want to cover:
 
