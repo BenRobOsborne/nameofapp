@@ -25,18 +25,17 @@ nav {
     padding: 25px 30px;
     }
   ul {
-
     list-style: none;
-  }
- li {
+   }
+  li {
     display: inline-block;
     float: right;
     padding: 30px 20px;
   }
   a {
-    color: #D35400;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: #D35400;
     padding: 15px 20px;
     position: relative;
   }
@@ -116,7 +115,7 @@ nav {
 footer  {
     width: 100%;
     height: auto;
-    background: rgba(19, 15, 12, 0.8);
+    background: rgba(19, 15, 12, 0.7);
     margin: 20px auto 0px;
     padding: 5px ;
   p {
@@ -136,8 +135,8 @@ footer  {
      padding: 0px;
    }
    a {
-     font-size: 30px;
-     color:#D35400;
+     font-size: 40px;
+     color: #D35400;
      padding:10px;
    }
    a:hover {
