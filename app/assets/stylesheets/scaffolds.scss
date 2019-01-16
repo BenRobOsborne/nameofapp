@@ -1,4 +1,4 @@
-body {
+/*body {
   background-color: #fff;
   color: #333;
   margin: 33px;
@@ -8,11 +8,11 @@ body {
 
 }
 
-p, ol, ul, td {
+p, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #000;
+  color: #D35400;
 }
 
 pre {
@@ -21,18 +21,18 @@ pre {
   font-size: 11px;
 }
 
-a {
+/*a {
   color: #000;
 
   &:visited {
-    color: #666;
+    color: #D35400;
   }
 
   &:hover {
     color: #000;
-    background-color: #000;
+    background-color: #D35400;
   }
-}
+}*/
 
 th {
   padding-bottom: 5px;
@@ -63,7 +63,7 @@ div {
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #a6a6a6;
 
   h2 {
     text-align: left;
@@ -72,7 +72,7 @@ div {
     font-size: 15px;
     margin: -7px -7px 0;
     background-color: #c00;
-    color: #fff;
+    color: #D35400;
   }
 
   ul li {

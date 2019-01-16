@@ -1,19 +1,20 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  margin:0;
-}
+
+
 .products {
   margin: 50px auto;
 }
 .top-buffer {
-  margin-top: 20px;
+  margin-top: 20px auto;
+  color: #000;
+}
+h2 {
+  color: grey;
 }
 
 .new_product {
-  width: 130px;
-  border: 2px solid #D35400;
   margin: 20px;
   padding:10px;
 }
@@ -22,6 +23,6 @@ body {
 }
 .actions{
   margin-left: 30px;
-  width: 117px;
-  border: 2px solid #D35400;
+
+
 }
