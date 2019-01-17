@@ -1,22 +1,41 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-//landing page
-.carousel-inner {
-  color: #fff;
+* {
+  margin:0;
+  padding:0;
 }
-//index.html
-body {
+//landing page
+.my-image {
+  display:block;
+  margin: 3rem auto 3rem;
+}
+
+.carousel-caption {
+  color: grey;
+}
+a .sr-only {
+  color: #D35400;
+}
+
+html, body {
+  height: 100%;
   position: relative;
-  margin: 0;
+}
+#container {
+  min-height: 100%;
+}
+#main{
+  overflow: auto;
+  padding-bottom: 5.5rem;
 }
 h1 {
   font-family:'Permanent Marker', cursive;
   color: #D35400;
   text-align: center;
   font-size: 3em;
-  padding-top: 2.2em;
-  padding-bottom: 0.5em;
+  padding-top:2.2em;
+  padding-bottom: 1em;
 }
 /*navi*/
 nav {
@@ -24,6 +43,7 @@ nav {
     position: fixed;
     z-index: 1;
     width:100%;
+    height: auto;
   h3  {
     margin:0;
     float:left;
@@ -36,7 +56,7 @@ nav {
   li {
     display: inline-block;
     float: right;
-    padding: 30px 20px;
+    padding: 25px 20px;
   }
   a {
     text-transform: uppercase;
@@ -120,11 +140,12 @@ nav {
 
 /*footer*/
 footer  {
-    width: 100%;
-    height: auto;
     background: rgba(19, 15, 12, 0.7);
-    margin: 20px auto 0px;
-    padding: 5px ;
+    position:relative;
+    height: 5.5rem;
+    margin-top: -5.5rem;
+    clear: both;
+    width: 100%;
   p {
     text-align: center;
     font-size: 14px;
@@ -152,4 +173,9 @@ footer  {
      -webkit-transition: background-color 600ms ease;
      transition: background-color 600ms ease;
    }
+}
+/*about styles*/
+h4, h3, h2 {
+  color: #5D6D7E;
+  margin: 2rem 3rem;
 }
