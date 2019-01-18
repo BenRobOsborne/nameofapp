@@ -10,6 +10,11 @@
   display:block;
   margin: 3rem auto 3rem;
 }
+.my-logo {
+  display: inline-block;
+  float: left;
+  padding: 25px 20px;
+}
 
 .carousel-caption {
   color: grey;
@@ -24,6 +29,7 @@ html, body {
 }
 #container {
   min-height: 100%;
+  background-color: #C3C3C3;
 }
 #main{
   overflow: auto;
@@ -39,7 +45,7 @@ h1 {
 }
 /*navi*/
 nav {
-    background-color: rgba(19, 15, 12, 0.7);
+    background-color: rgba(39, 55, 70, 0.9);
     position: fixed;
     z-index: 1;
     width:100%;
@@ -109,7 +115,7 @@ nav {
   .toggle {
     width: 100%;
     padding: 10px 20px;
-    background: rgba(19, 15, 12, 0.8);
+    background: rgba(39, 55, 70, 0.9);
     text-align: right;
     box-sizing: border-box;
     color: #D35400;
@@ -140,7 +146,7 @@ nav {
 
 /*footer*/
 footer  {
-    background: rgba(19, 15, 12, 0.7);
+    background: rgba(39, 55, 70, 0.9);
     position:relative;
     height: 5.5rem;
     margin-top: -5.5rem;
@@ -176,6 +182,6 @@ footer  {
 }
 /*about styles*/
 h4, h3, h2 {
-  color: #5D6D7E;
+  color: #273746;
   margin: 2rem 3rem;
 }
