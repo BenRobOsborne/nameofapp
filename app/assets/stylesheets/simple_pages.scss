@@ -41,7 +41,7 @@ h1 {
   text-align: center;
   font-size: 3em;
   padding-top:2.2em;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
 }
 /*navi*/
 nav {
@@ -148,7 +148,7 @@ nav {
 footer  {
     background: rgba(39, 55, 70, 0.9);
     position:relative;
-    height: 5.5rem;
+    height: 6rem;
     margin-top: -5.5rem;
     clear: both;
     width: 100%;
@@ -181,7 +181,12 @@ footer  {
    }
 }
 /*about styles*/
-h4, h3, h2 {
+h4, h3 {
   color: #273746;
   margin: 2rem 3rem;
+}
+h2 {
+  color: #273746;
+  text-align: center;
+  margin: 1rem auto;
 }

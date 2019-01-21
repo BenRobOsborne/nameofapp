@@ -1,7 +1,22 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  font-family:'Permanent Marker', cursive;
+  color: #D35400;
+  text-align: center;
+  font-size: 3em;
+  padding-top:2.2em;
+  padding-bottom: .5em;
+}
 
+p {
+  
+}
+
+.links{
+  margin-left: 3rem;
+}
 
 .products {
   margin: 50px auto;
