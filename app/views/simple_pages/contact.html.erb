@@ -1,10 +1,31 @@
 <div class="container-fluid-contact">
 
-<h1>Reach Out</h1>
+  <h1>Contact Us</h1>
 
-<div class="index-pic">
-  <%= image_tag("bikes/riders.jpg", class: "img-responsive my-image", width:'100%') %>
+  <%= flash[:notice] %>
+
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
 </div>
+<div class="contact-button">
+<%= form.submit "Send", class: 'btn btn-success form_label' %>
+</div>
+
+<% end %>
+
+
 
 <h4>Address: Cyclingstraße 1 Kleve</h4>
 

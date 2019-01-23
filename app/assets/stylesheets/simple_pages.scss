@@ -144,6 +144,17 @@ nav {
  }
 /*carousel*/
 
+/* ContactPage */
+.form-group {
+  width:60%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.contact-button {
+  text-align: center;
+}
+
+
 /*footer*/
 footer  {
     background: rgba(39, 55, 70, 0.9);
@@ -189,4 +200,14 @@ h2 {
   color: #273746;
   text-align: center;
   margin: 1rem auto;
+}
+.panel-body p {
+  border: 5px solid #D35400;
+  width:300px;
+  margin: 10rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+#container-contact {
+  text-align: center;
 }

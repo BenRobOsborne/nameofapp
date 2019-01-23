@@ -20,21 +20,35 @@
   <body>
     <!-- navi-->
     <header>
-      <nav>
-
-        <div class="toggle">
-          <i class="fa fa-bars menu" aria-hidden="true"></i>
+      <nav class="navbar navbar-expand-lg fixed-top" role="navigation" id="navbar-example">
+        <div class="navbar-brand">
+          <%= image_tag("bike-logo.png", class: "img-responsive my-logo", height: '70px', width:'80px') %>
         </div>
-        <div class="logo">
-          <%= image_tag("bike-logo.png", class: "img-responsive my-logo", width:'80px') %>
-        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id= "navbarSupportedContent">
 
-        <ul>
-          <li><%= link_to "Home", root_path, class:'link' %></li>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active"><%= link_to "Home", root_path, class:'link' %></li>
           <li><%= link_to "About", simple_pages_about_path, class:'link' %></li>
           <li><%= link_to "Contact", simple_pages_contact_path, class:'link' %></li>
           <li><%= link_to "Products", products_path, class:'link' %></li>
         </ul>
+
+      <form>
+        <div class="form">
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+
+          <%= form.text_field :q, id: 'q', value: params[:q], placeholder:'Search for:', class: 'form-control-sm' %>
+          <%= form.submit 'Search', class: 'btn btn-light my-sm-0' %>
+        </div>
+      <% end %>
+
+
+      </form>
+      </div>
      </nav>
    </header>
 
@@ -62,11 +76,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
     <script type="text/javascript">
-      $(document).ready(function(){
-        $('.menu').click(function(){
-          $('ul').toggleClass('active');
-        })
-      })
+
 
     </script>
   </body>

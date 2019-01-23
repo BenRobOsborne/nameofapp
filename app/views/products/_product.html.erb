@@ -5,7 +5,10 @@
     <p><%= product.description %></p>
     <p><%= product.colour %></p>
     <p><%= product.price %></p>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    <div id="container-product">
+      <%= link_to 'Show', product, class:"btn btn-info" %>
+      <%= link_to 'Edit', edit_product_path(product), class:"btn btn-secondary"%>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+    </div>
   </div><!-- /col -->
