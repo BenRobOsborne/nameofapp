@@ -7,7 +7,6 @@ class UserMailer < ApplicationMailer
          to: 'benosborne605@gmail.com',
          subject: "A new contact form message from #{name}")
   end
-end
 
   def thank_you
     @name = params[:name]
@@ -15,3 +14,4 @@ end
     @message = params[:message]
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
+end
