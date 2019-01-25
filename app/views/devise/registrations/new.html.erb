@@ -1,0 +1,38 @@
+<h1>Sign up</h1>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+<div class="modal-dialog">
+  <div class="col-sm-12 main-section">
+    <div class="modal-content">
+      <div class="col-12 form">
+        <form>
+          <div class="form-group">
+            <h5><%= "Please sign in" %></h5>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter email" %>
+          </div>
+          <div class="form-group">
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Enter password" %>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Enter password" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit "Sign up", class: "btn btn-success form-control" %>
+          </div>
+
+          <div class="login-link">
+          <%= render "devise/shared/links", class:"link" %>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>
