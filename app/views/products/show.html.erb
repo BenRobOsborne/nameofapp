@@ -25,9 +25,11 @@
 <p>
   <strong>Image url:</strong>
   <%= @product.image_url %>
-  
-<div class="links">
 
+
+  <%= @product.highest_rating_comment %>
+  <%= @product.lowest_rating_comment %>
+<div class="links">
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 </div>
