@@ -17,6 +17,11 @@ end
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC")
+    if @comments.blank?
+      @avg_rating = 0
+    else
+      @avg_rating = @comments.average(:rating).round(2)
+    end
   end
 
   # GET /products/new

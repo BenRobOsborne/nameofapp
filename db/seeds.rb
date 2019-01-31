@@ -6,3 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.create(name: "YT Capra 29 CF Pro", description: "Rated best value for under $5000", color: "Red", price: "$4400.00", image: "mbike9.jpeg")
+Comment.create!(user: User.first, product: Product.first, rating: 2, body: "Not so good")
