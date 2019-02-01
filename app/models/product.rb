@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
+
   has_many :comments
 
   def highest_rating_comment
@@ -6,7 +8,7 @@ class Product < ApplicationRecord
   end
 
   def lowest_rating_comment
-    comments.rating_desc.last
+    comments.rating_asc.first
   end
 
   def average_rating_comment

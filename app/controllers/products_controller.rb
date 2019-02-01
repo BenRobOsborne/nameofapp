@@ -16,12 +16,7 @@ end
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC")
-    if @comments.blank?
-      @avg_rating = 0
-    else
-      @avg_rating = @comments.average(:rating).round(2)
-    end
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
   end
 
   # GET /products/new
@@ -33,6 +28,10 @@ end
   def edit
   end
 
+  def average_rating
+    comments.average(:rating).to_f
+  end
+  
   # POST /products
   # POST /products.json
   def create
