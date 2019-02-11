@@ -7,7 +7,7 @@
 <div class="container-show">
   <div class="row">
     <div class="col-md-6 show-img">
-      <%= image_tag(@product.image_url, class: "img-responsive", width: '80%') %>
+      <%= image_tag(@product.image_url, class: "img-responsive", width: '100%') %>
     </div>
 
     <div class="col-md-6 description">
@@ -26,7 +26,7 @@
         <%= @product.price %>
       </p>
       <p>Average Rating:
-       <%= @product.average_rating_comment%>
+       <%= @product.average_rating_comment %>
        </p>
     </div>
   </div>
@@ -38,7 +38,9 @@
 
       <%= render 'new_comment' %>
       <%= render 'comments' %>
+
       <span class="rating" data-score=<%= @comment_rating %>></span>
+
       <p><strong>Best rating:</strong>
       <%= @product.highest_rating_comment.rating %></p>
 
