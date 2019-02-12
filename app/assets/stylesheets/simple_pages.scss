@@ -112,20 +112,19 @@ nav {
   a:hover:after {
     transform: scale(1);
   }
-  .toggle {
+  .navbar-toggler-icon {
     width: 100%;
-    padding: 10px 20px;
-    background: rgba(39, 55, 70, 0.9);
+    padding: 10px 10px;
     text-align: right;
     box-sizing: border-box;
     color: #D35400;
-    font-size: 30px;
-    display:none;
+    font-size: 20px;
+
    }
     @media (max-width: 768px){
-      .toggle
-      {
-        display:block;
+      .navbar-toggler  {
+        display: block;
+        color: #D35400;
       }
       h3 {
         display: none;
