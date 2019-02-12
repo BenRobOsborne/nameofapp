@@ -27,10 +27,10 @@
        <%= @product.average_rating_comment %>
        </p>
        <p><strong>Best rating:</strong>
-       <%= @product.highest_rating_comment.rating %></p>
+       <%= @product.highest_rating_comment.try(:rating) %></p>
 
        <p><strong>Worst rating:</strong>
-       <%= @product.lowest_rating_comment.rating %></p>
+       <%= @product.lowest_rating_comment.try(:rating) %></p>
     </div>
   </div>
 </div>
