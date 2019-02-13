@@ -10,8 +10,8 @@
 // about supported directives.
 //= require jquery3
 //= require jquery_ujs
-//= require jquery.raty.js
+//= require jquery.raty
 //= require activestorage
 //= require turbolinks
-//= require_tree ../../../vendor/assets/javascripts
 //= require_tree .
+//= require_tree ../../../vendor/assets/javascripts

@@ -2,12 +2,13 @@
       <h5>Leave a review:</h5>
         <% if signed_in? %>
           <%= form_for([@product, @product.comments.build]) do |f| %>
-            <div class="form-group">
-                
-                <%= f.number_field :rating, class: "form-control", placeholder: "Rating"  %>
-            </div>
-            <div class="form-group">
 
+            <div class="form-group">
+                <%= f.label :rating, class: "form-control-label" %>
+                <div id='star-rating'></div>
+            </div>
+
+            <div class="form-group">
                 <%= f.text_area :body,class: "form-control", placeholder: "Comment" %>
                 <%= f.submit "Submit", class:"btn btn-success new-comment-btn" %>
             </div>
