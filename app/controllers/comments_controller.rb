@@ -1,9 +1,6 @@
 class CommentsController < ApplicationController
 
-  def new
-    @product = Product.find(params[:product_id])
-    @comment = Comment.new
-  end
+
 
   def create
     @product = Product.find(params[:product_id])
