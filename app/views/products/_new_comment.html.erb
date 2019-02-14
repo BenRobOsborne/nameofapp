@@ -5,7 +5,9 @@
 
             <div class="form-group">
                 <%= f.label :rating, class: "form-control-label" %>
-                <div id='star-rating'></div>
+                <div id='star-rating'>
+                  <%= f.number_field :rating %>
+                </div>
             </div>
 
             <div class="form-group">
