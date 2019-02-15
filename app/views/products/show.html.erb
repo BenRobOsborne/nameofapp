@@ -53,6 +53,7 @@
 <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-secondary" %> |
 <%= link_to 'Back', products_path, class:"btn btn-info" %>
 </div>
+
 <script>
     $('.star-rating').raty({
       path: '/assets/',
@@ -65,6 +66,6 @@
 <script>
 $('#star-rating').raty({
     path: '/assets',
-    scoreName: 'review[rating]'
+    scoreName: 'comment[rating]'
 });
 </script>
