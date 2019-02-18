@@ -53,19 +53,3 @@
 <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-secondary" %> |
 <%= link_to 'Back', products_path, class:"btn btn-info" %>
 </div>
-
-<script>
-    $('.star-rating').raty({
-      path: '/assets/',
-      readOnly: true,
-      score: function() {
-            return $(this).attr('data-score');
-    }
-  });
-</script>
-<script>
-$('#star-rating').raty({
-    path: '/assets',
-    scoreName: 'comment[rating]'
-});
-</script>
