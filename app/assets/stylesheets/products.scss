@@ -1,6 +1,7 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//product page
 h1 {
   font-family:'Permanent Marker', cursive;
   color: #D35400;
@@ -9,7 +10,15 @@ h1 {
   padding-top:3rem;
   padding-bottom: .5rem;
 }
-
+.item1 {
+  height: 80px;
+}
+.item2 {
+  height:270px;
+}
+.description {
+  margin-top: 10px;
+}
 .links{
   margin-left: 3rem;
 }
@@ -71,5 +80,37 @@ h2 {
   color: rgb(39, 55, 70);
 }
 .login-link a:hover {
+  color: #D35400;
+}
+/* showpage*/
+.container-show{
+  margin:10px;
+}
+.container-comments {
+  margin:10px;
+}
+.product-reviews {
+  border-top: solid 1px #D35400;
+  border-bottom: solid 1px #D35400;
+  padding: 1rem;
+}
+.container-review{
+  background: #F3904F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  h5 {
+    text-align: center;
+    padding: 10px;
+    color: silver;
+  }
+}
+.new-comment-btn {
+  margin-top: 10px;
+}
+/*show page pagination*/
+.pagination {
+  display: inline-block;
+  margin-left: 44%;
+  min-width: 200px;
   color: #D35400;
 }

@@ -5,4 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.create(name: "YT Capra 29 CF Pro", description: "Rated best value for under $5000", color: "Red", price: "$4400.00", image: "mbike9.jpeg")
+Product.create(name: "YT Capra 29 CF Pro", description: "Rated best value for under $5000", colour: "Red", price: "$4400.00", image_url: "mbike9.jpeg")
+Comment.create!(user: User.first, product: Product.first, rating: 2, body: "Not so good")
+Comment.create!(user: User.first, product: Product.second, rating: 4, body: "This is a very nice bike.")
+Comment.create!(user: User.first, product: Product.second, rating: 5, body: "Fantastic Bike!")
+Comment.create!(user: User.first, product: Product.second, rating: 3, body: "This is one amazing bike!")
+Comment.create!(user: User.first, product: Product.third, rating: 4, body: "This is a very nice bike")
+Comment.create!(user: User.first, product: Product.third, rating: 5, body: "Fantastic Bike!")
+Comment.create!(user: User.first, product: Product.third, rating: 4, body: "This is a very nice bike")
+Comment.create!(user: User.first, product: Product.third, rating: 2, body: "I was actually disapointed..")
