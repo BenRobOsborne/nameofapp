@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Order do
   let (:product) { Product.create!(name:"mountain bike", description:"awesome bike!", image_url: "bike5.jpg") }
-  let(:user) { User.create!(email: "barbara47623@gmail.com", password: "secret") }
+  let(:user) { FactoryBot.create(:user) }
 
   it "is not valid without product " do
     expect(Order.new( user: user, total: 1)).not_to be_valid

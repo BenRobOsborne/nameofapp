@@ -1,18 +1,9 @@
 require 'rails_helper'
 
-  describe User do
-    let(:user) { User.create!(email: "barbara47623@gmail.com", password: "secret") }
+  describe User, type: :model do
 
-    it "is a valid email" do
-      expect(user.email).to eq "barbara47623@gmail.com"
+    it "should not validate users without an email address" do
+      @user = FactoryBot.build(:user, email: "not_an_email")
+      expect(@user).to_not be_valid
     end
-
-    it "is a valid password" do
-      expect(user.password).to eq "secret"
-    end
-
-    it "is not a valid email without a password" do
-      expect(User.new(email: "john@gmail.com")).not_to be_valid
-    end
-
   end
