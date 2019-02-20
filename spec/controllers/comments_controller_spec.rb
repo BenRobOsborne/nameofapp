@@ -4,7 +4,7 @@ require 'rails_helper'
     before do
       @user = FactoryBot.create(:user)
       @product = FactoryBot.create(:product)
-      @comment = FactoryBot.create(:comment)
+
     end
 
     context 'when user is logged in' do
@@ -12,10 +12,9 @@ require 'rails_helper'
         sign_in @user
       end
 
-      it 'loads correct comment' do
-        get :show, params: { id: @comment.id }
-        expect(response).to be_ok
-        expect(assigns(:order)).to eq @product
+      it 'can create a comment' do
+        post :create, params: { product_id: @product.id, comment: { body: "good bike", rating: 5} }
+        expect(response).to have_http_status(302)
       end
     end
   end
