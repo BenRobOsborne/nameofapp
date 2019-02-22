@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
     @products = Product.search(search_term)
   else
     @products = Product.all
+   # logger.debug "My search found #{@products.count} products"
   end
 end
 

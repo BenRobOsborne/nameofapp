@@ -2,6 +2,7 @@
   <div class="col-md-4">
     <div class="item1">
       <h2><%= product.name %></h2>
+      <% logger.debug "Product name is #{product.name}"%>
     </div>
     <div class="item2"><%= image_tag(product.image_url, class: "img-fluid")unless product.image_url.nil? %></div>
     <div class="description"><%= product.description %></div>
