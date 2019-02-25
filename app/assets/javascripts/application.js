@@ -15,4 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts
-//= require jquery.elevateZoom-3.0.8.min
