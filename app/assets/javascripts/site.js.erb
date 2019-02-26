@@ -1,10 +1,3 @@
-$( document ).on('turbolinks:load', function() {
-	refreshRating();
-// Zoom Img for show page
-	$('.img-zoom').elevateZoom();
-
-});
-
 var refreshRating = function() {
   $('#star-rating').raty({
 		starHalf: '<%= asset_path 'star-half.png' %>',
@@ -22,6 +15,10 @@ var refreshRating = function() {
             return $(this).attr('data-score');
     }
   });
+};
 
-  $('input[name="comment[rating]"]').attr('required', true);
-}
+$( document ).on('turbolinks:load', function() {
+	refreshRating();
+// Zoom Img for show page
+	$('.img-zoom').elevateZoom();
+});

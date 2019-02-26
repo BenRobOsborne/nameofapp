@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource
+  load_and_authorize_resource only: [:update, :destroy]
 
 
   def create
