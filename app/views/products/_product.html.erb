@@ -1,6 +1,7 @@
 
   <div class="col-md-4">
     <div class="item1">
+<% cache product do %>
       <h2><%= product.name %></h2>
       <% logger.debug "Product name is #{product.name}"%>
     </div>
@@ -9,9 +10,11 @@
     <p><%= product.colour %></p>
     <p><%= product.price %></p>
 
+
     <div id="container-product">
       <%= link_to 'Show', product, class:"btn btn-info" %>
       <%= link_to 'Edit', edit_product_path(product), class:"btn btn-secondary"%>
       <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
     </div>
+    <% end %>
   </div><!-- /col -->

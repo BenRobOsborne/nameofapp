@@ -5,9 +5,10 @@
 
 <div class="container-fluid products">
   <div class="row top-buffer">
-
+<% cache(cache_key_for_products) do %>
       <%= render @products %>
-    
+<% end %>
+
   </div>
 </div>
 
