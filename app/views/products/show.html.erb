@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container-show">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <% cache @product do %>
     <div class="col-md-6 show-img">
       <%= image_tag(@product.image_url, class: "img-responsive img-zoom", width: "100%", data_zoom_image: "@product.image_url") %>
