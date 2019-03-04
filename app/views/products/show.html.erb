@@ -53,6 +53,9 @@
 <%= will_paginate @comments, previous_label: "Newer", next_label: "Older", inner_window: 1, outer_window: 0 %>
 
 <div class="links show-link">
-<%= link_to 'Edit', edit_product_path(@product), class:"btn btn-secondary" %> |
-<%= link_to 'Back', products_path, class:"btn btn-info" %>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-secondary" %> |
+  <% end %>
+
+  <%= link_to 'Back', products_path, class:"btn btn-info" %>
 </div>

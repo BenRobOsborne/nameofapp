@@ -13,8 +13,11 @@
 
     <div id="container-product">
       <%= link_to 'Show', product, class:"btn btn-info" %>
-      <%= link_to 'Edit', edit_product_path(product), class:"btn btn-secondary"%>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+      <% end %>
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path(product), class:"btn btn-secondary"%>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+      <% end %>
     </div>
-    <% end %>
+
   </div><!-- /col -->
