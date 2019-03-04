@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //product page
-h1 {
+h2 {
+  color: grey;
+}
+.name {
   font-family:'Permanent Marker', cursive;
   color: #D35400;
   text-align: center;
   font-size: 3rem;
-  padding-top:3rem;
+  padding-top: 12rem;
   padding-bottom: .5rem;
 }
 .item1 {
@@ -30,9 +33,7 @@ h1 {
   margin-top: 20px auto;
   color: #000;
 }
-h2 {
-  color: grey;
-}
+
 
 .new_product {
   margin: 20px;

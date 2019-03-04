@@ -1,33 +1,29 @@
 <div class="container-fluid-contact">
+  <div class="contact">
+    <h1>Contact Us</h1>
 
-  <h1>Contact Us</h1>
+      <%= flash[:notice] %>
 
-  <%= flash[:notice] %>
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+      <div class="row">
+        <div class="form-group">
+          <p><%= form.label :name %></p>
+          <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+        </div>
+        <div class="form-group">
+          <p><%= form.label :email %></p>
+          <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <p><%= form.label :message %></p>
+          <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+        </div>
+       </div>
+       <div class="contact-button">
+         <%= form.submit "Send", class: 'btn btn-success form_label' %>
+       </div>
 
-<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
-  </div>
-  <div class="form-group">
-    <%= form.label :message %>
-    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
-  </div>
-</div>
-<div class="contact-button">
-<%= form.submit "Send", class: 'btn btn-success form_label' %>
-</div>
-
-<% end %>
-
-
-
-<h4>Address: Cyclingstraße 1 Kleve</h4>
-
-<h4>Phone: 0289652036</h4>
+        <% end %>
+        <p class="info">Address: Cyclingstraße 1 Kleve - Phone: 0289652036</p>
+    </div>
 </div>

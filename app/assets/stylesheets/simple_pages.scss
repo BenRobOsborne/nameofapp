@@ -1,9 +1,13 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {
-  margin:0;
-  padding:0;
+html, body {
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: -23px;
+  bottom: -10px;
 }
 //landing page
 .my-image {
@@ -13,7 +17,6 @@
 .my-logo {
   display: inline-block;
   float: left;
-  
 }
 
 .carousel-caption {
@@ -23,10 +26,7 @@ a .sr-only {
   color: #D35400;
 }
 
-html, body {
-  height: 100%;
-  position: relative;
-}
+
 #container {
   min-height: 100%;
   background-color: #C3C3C3;
@@ -37,15 +37,15 @@ html, body {
 }
 h1 {
   font-family:'Permanent Marker', cursive;
-  color: #D35400;
+  color: #FFF;
   text-align: center;
-  font-size: 3em;
+  font-size: 2rem;
   padding-top:3em;
   padding-bottom: .5rem;
 }
 /*navi*/
 nav {
-    background-color: rgba(39, 55, 70, 0.9);
+    background-color: rgba(39, 55, 70, 0.3);
     position: fixed;
     z-index: 1;
     width:100%;
@@ -66,8 +66,8 @@ nav {
   }
   a {
     text-transform: uppercase;
-    font-size: 1.4em;
-    color: #D35400;
+    font-size: 1em;
+    color: #FFF;
     padding: 15px 20px;
     position: relative;
   }
@@ -143,6 +143,15 @@ nav {
  }
 /*carousel*/
 
+/* about page*/
+.overlay {
+  position:absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
 /* ContactPage */
 .form-group {
   width:60%;
@@ -152,16 +161,30 @@ nav {
 .contact-button {
   text-align: center;
 }
+.contact {
+  border: 1px solid #C3C3C3;
+  margin:200px 150px 100px ;
+  background: #F3904F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  p {
+    color: #D5D6D6;
+  }
+}
 
+.info {
+  text-align: center;
+}
 
 /*footer*/
 footer  {
-    background: rgba(39, 55, 70, 0.9);
+    background: rgba(39, 55, 70, 0.3);
     position:relative;
     height: 6rem;
     margin-top: -5.5rem;
     clear: both;
     width: 100%;
+
   p {
     text-align: center;
     font-size: 14px;
@@ -196,7 +219,7 @@ h4, h3 {
   margin: 2rem 3rem;
 }
 h2 {
-  color: #273746;
+  color: #FFF;
   text-align: center;
   margin: 1rem auto;
 }
