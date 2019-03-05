@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
-  
+
   # GET /users
   # GET /users.json
   def index
-    @users = User.where.not(:id => current_user.id)
+    @users = User.all
   end
 
   # GET /users/1
