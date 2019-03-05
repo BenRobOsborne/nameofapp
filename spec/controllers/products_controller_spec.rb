@@ -7,6 +7,39 @@ describe ProductsController, type: :controller do
         @product = FactoryBot.create(:product)
     end
 
+    describe 'post #create' do
+      context 'when user is admin' do
+        before do
+          sign_in @admin
+        end
+        it 'will create new product' do
+          @product2 = FactoryBot.create(:product)
+          expect(response).to be_successful
+        end
+      end
+    end
+
+    describe 'PUT #update'do
+      before do
+        @product3 = FactoryBot.create(:product)
+      end
+      it 'requires admin' do
+        put :update, params: { id: @product3.id}
+        expect(response).to be_redirect
+      end
+
+      context 'when user is admin' do
+        before do
+          sign_in @admin
+        end
+        it 'can delete' do
+          delete :destroy, params: {id: @product3.id}
+          expect(response).to redirect_to products_url
+        end
+    end
+  end 
+
+
     describe 'GET #index' do
       it "renders the products index template" do
         get :index
@@ -68,7 +101,7 @@ describe ProductsController, type: :controller do
             expect(response).to have_http_status(302)
             expect(response).to redirect_to(root_path)
           end
-          
+
         end
      end
 
@@ -90,7 +123,7 @@ describe ProductsController, type: :controller do
 
             it 'can not destroy product' do
               delete :destroy, params: { id: @product.id }
-              expect(response).to redirect_to products_url
+              expect(response).to redirect_to(root_path)
             end
           end
 

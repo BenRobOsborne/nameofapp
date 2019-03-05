@@ -73,6 +73,18 @@
 <div id="container">
   <div id="main">
 
+    <div class="container">
+      <% if notice %>
+        <div class="alert alert-dark" role="alert">
+          <p class="notice"><%= notice %></p>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-warning" role="alert">
+          <p class="alert"><%= alert %></p>
+        </div>
+      <% end %>
+    </div>
 
 
     <%= yield %>
