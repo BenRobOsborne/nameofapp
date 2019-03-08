@@ -45,24 +45,19 @@ html, body {
     }
 /*navi*/
     nav {
-        background-color: rgba(39, 55, 70, 0.4);
+        background-color: rgba(39, 55, 70, 0.5);
         position: fixed;
         z-index: 1;
         width:100%;
         height: auto;
-      h3  {
-        margin:0;
-        float:left;
-        color: #D35400;
-        padding: 25px 30px;
-        }
+
       ul {
         list-style: none;
        }
       li {
         display: inline-block;
         float: right;
-        padding: 25px 20px;
+        padding: 0px 15px;
       }
       a {
         text-transform: uppercase;
@@ -84,7 +79,7 @@ html, body {
         height: 100%;
         border-top: 1px solid #D35400;
         border-bottom: 1px solid #D35400;
-        transform: scaleY(1.7);
+        transform: scaleY(1.5);
         opacity: 0;
         -webkit-transition:  0.5s;
         transition: 0.5s;
@@ -112,38 +107,29 @@ html, body {
       a:hover:after {
         transform: scale(1);
       }
-      .navbar-toggler-icon {
-        width: 100%;
-        padding: 10px 10px;
-        text-align: right;
-        color: #D35400;
-        box-sizing: border-box;
-        font-size: 20px;
-       }
+      li .nav-item {
+        color: #FFF;
+      }
         @media (max-width: 768px){
           nav {
-            background-color: rgba(39, 55, 70, 0.8);
+            background-color: rgba(39, 55, 70, 0.9);
           }
-          .navbar-toggler-icon  {
-            display:block;
-            color: #D35400;
-          }
-
-          h3 {
-            display: none;
-          }
-          ul {
-            display:none;
+          button.navbar-toggler:focus { outline: 1px none;
+           }
+        ul {
+           display:none;
           }
           ul li {
             display: block;
             text-align: center;
+            padding: 10px;
           }
           .active {
             display:block;
           }
         }
      }
+
 /*carousel*/
 
 /* about page*/
@@ -154,12 +140,11 @@ html, body {
       transform: translate(-50%);
     }
 
-    .index-pic {
-
       @media (max-width: 768px){
+        .index-pic {
         margin-top: 170px;
+        }
       }
-    }
 
 
 /* ContactPage */
