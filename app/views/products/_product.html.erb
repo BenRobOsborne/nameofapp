@@ -8,8 +8,9 @@
     <div class="item2"><%= image_tag(product.image_url, class: "img-fluid")unless product.image_url.nil? %></div>
     <div class="description"><%= product.description %></div>
     <p><%= product.colour %></p>
-    <p><%= product.price %></p>
+    <p><% product.price %></p>
 
+    <%= render "product_row", product: product, order_item: @order_item %>
 
     <div id="container-product">
       <%= link_to 'Show', product, class:"btn btn-info" %>

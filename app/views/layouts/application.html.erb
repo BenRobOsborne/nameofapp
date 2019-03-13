@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nameofapp</title>
+    <title>Pushys-Chain-Reaction</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
@@ -21,12 +21,13 @@
     <%= csp_meta_tag %>
     <%= javascript_include_tag "jquery.raty" %>
 
+
+
   </head>
 
   <body>
 
-
-    <!-- navi-->
+<!-- navi-->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="navbar-brand">
@@ -43,16 +44,21 @@
             <li><%= link_to "Products", products_path, class:'link' %></li>
           </ul>
 
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "link") %>
             </li>
             <% else %>
             <li class="nav-item">
-              <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+              <%= link_to('Login', new_user_session_path, class: "link") %>
             </li>
             <% end %>
+            <li class="cart">
+              
+              <%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", cart_path, class: "btn btn-link" %>
+
+            </li>
           </ul>
 
       <form>
@@ -67,6 +73,7 @@
       </div>
      </nav>
    </header>
+
 
 <div id="container">
   <div id="main">
@@ -104,9 +111,6 @@
       <script type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-
-
 
   </body>
 </html>

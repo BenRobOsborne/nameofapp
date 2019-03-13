@@ -25,7 +25,12 @@
        <strong>Average Rating:</strong>
        <div id="average-rating", class='star-rating',  data-score=<%= @product.average_rating_comment %>></div>
 
-       <div class="strip-button">
+       <%= render "product_row", product: @product, order_item: @order_item %>
+
+       
+
+
+      <div class="strip-button">
          <%= form_with(url: '/payments/create') do |form| %>
          <%= render partial: "shared/stripe_checkout_button" %>
          <%= hidden_field_tag(:product_id, @product.id) %>

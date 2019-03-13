@@ -20,4 +20,10 @@ class UserMailer < ApplicationMailer
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
+  def order_confirmation(user, order)
+    @user = user
+    @order = order
+    mail(:to => user.email, :subject=> "Thankyou for your purchase!")
+  end
+
 end

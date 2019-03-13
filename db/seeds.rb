@@ -14,3 +14,14 @@ Comment.create!(user: User.first, product: Product.third, rating: 4, body: "This
 Comment.create!(user: User.first, product: Product.third, rating: 5, body: "Fantastic Bike!")
 Comment.create!(user: User.first, product: Product.third, rating: 4, body: "This is a very nice bike")
 Comment.create!(user: User.first, product: Product.third, rating: 2, body: "I was actually disapointed..")
+
+Product.delete_all
+Product.create! id: 1, name: "Giant", price: 1049.99, image_url: "mbike5.jpg", description: "Fantastic Bike!", active: true
+Product.create! id: 2, name: "Yt", price: 2000.99, image_url: "mbike6.jpg", description: "Fantastic Bike!", active: true
+Product.create! id: 3, name: "Yt Pro", price: 1500.99, image_url: "mbike9.jpg", description: "Fantastic Bike!", active: true
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"

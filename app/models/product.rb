@@ -1,4 +1,8 @@
-class Product < ApplicationRecord
+class Product < ActiveRecord::Base
+  has_many :order_items
+# This default seeting stops items being displayed if they are not active
+  default_scope { where(active: true) }
+
   has_many :comments
   validates :name, presence: true
 

@@ -8,8 +8,10 @@ class ProductsController < ApplicationController
   if params[:q]
     search_term = params[:q]
     @products = Product.search(search_term)
+    @order_item = current_order.order_items.new
   else
     @products = Product.all
+    @order_item = current_order.order_items.new
    # logger.debug "My search found #{@products.count} products"
   end
 end
@@ -19,6 +21,7 @@ end
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 2)
+    @order_item = current_order.order_items.new
   end
 
   # GET /products/new
@@ -82,6 +85,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :colour, :price, :image_url)
+      params.require(:product).permit(:name, :description, :colour, :price, :image_url, :active)
     end
 end

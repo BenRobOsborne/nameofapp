@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
 <body>
 
-  <h1 class="name">Products</h1>
-
-<div class="container-fluid products">
-  <div class="row top-buffer">
-<% cache(cache_key_for_products) do %>
+<h1 class="name">Products</h1>
+  <div class="container-fluid products">
+    <div class="row top-buffer">
+      <% cache(cache_key_for_products) do %>
       <%= render @products %>
-<% end %>
-
+      <% end %>
+    </div>
   </div>
-</div>
+
+
+
 
    <div class="new_product">
      <% if signed_in? && current_user.admin? %>

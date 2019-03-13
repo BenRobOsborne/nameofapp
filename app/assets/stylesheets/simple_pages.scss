@@ -45,7 +45,7 @@ html, body {
     }
 /*navi*/
     nav {
-        background-color: rgba(39, 55, 70, 0.5);
+        background-color: rgb(39, 55, 70);
         position: fixed;
         z-index: 1;
         width:100%;
@@ -57,7 +57,7 @@ html, body {
       li {
         display: inline-block;
         float: right;
-        padding: 0px 15px;
+        padding: 0px 5px;
       }
       a {
         text-transform: uppercase;
@@ -107,15 +107,9 @@ html, body {
       a:hover:after {
         transform: scale(1);
       }
-      li .nav-item {
-        color: #FFF;
-      }
+
         @media (max-width: 768px){
-          nav {
-            background-color: rgba(39, 55, 70, 0.9);
-          }
-          button.navbar-toggler:focus { outline: 1px none;
-           }
+
         ul {
            display:none;
           }
@@ -129,10 +123,16 @@ html, body {
           }
         }
      }
+   .nav-item {
+       color: #FFF;
+     }
 
 /*carousel*/
 
 /* about page*/
+    .index-pic {
+      margin-top: 150px;
+    }
     .overlay {
       position:absolute;
       top: 0px;
@@ -142,7 +142,7 @@ html, body {
 
       @media (max-width: 768px){
         .index-pic {
-        margin-top: 170px;
+        margin-top: 150px;
         }
       }
 
@@ -158,12 +158,13 @@ html, body {
       margin-top: 15px;
     }
     .contact {
-      padding-bottom: 100px;
+
       background: #F3904F;  /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       width: 100vw;
       margin-bottom: -100px;
+      padding-bottom: 100px;
       p {
         color: #D5D6D6;
       }
@@ -175,7 +176,7 @@ html, body {
 
 /*footer*/
 footer  {
-    background: rgba(39, 55, 70, 0.7);
+    background: rgb(39, 55, 70);
     position: sticky;
     height: 8rem;
     width: 100%;
