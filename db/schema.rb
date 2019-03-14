@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_13_080533) do
+ActiveRecord::Schema.define(version: 2019_03_14_104401) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_03_13_080533) do
     t.decimal "subtotal", precision: 12, scale: 2
     t.decimal "tax", precision: 12, scale: 2
     t.decimal "shipping", precision: 12, scale: 2
+    t.boolean "order_status_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

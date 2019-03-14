@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products, only: [:index]
   resource :cart, only: [:show]
-  resources :order_items, only: [:show, :create, :update, :destroy], defaults:{format:'js'}
+  resources :order_items, only: [:create, :update, :destroy], defaults: {format:'js'}
   resources :orders,only: [:index, :show, :create, :destroy]
 
   get 'simple_pages/about'
